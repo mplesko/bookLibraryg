@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="mark-laptop" name="com.logansrings.booklibrary.AuthorTests" tests="1" time="0.0060" timestamp="2010-10-17T04:42:01">
+  <properties />
+  <testcase classname="com.logansrings.booklibrary.AuthorTests" name="testSomething" time="0.0040" />
+  <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+  <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+</testsuite>

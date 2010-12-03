@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+  <testsuite errors="0" failures="0" hostname="mark-laptop" id="0" name="HelloControllerTests" package="booklibraryg" tests="1" time="1.004" timestamp="2010-10-17T04:42:00">
+      <properties />
+
+      <testcase classname="booklibraryg.HelloControllerTests" name="testSomething" time="0.978" />
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="mark-laptop" id="1" name="AuthorControllerTests" package="com.logansrings.booklibrary" tests="1" time="0.025" timestamp="2010-10-17T04:42:01">
+      <properties />
+
+      <testcase classname="com.logansrings.booklibrary.AuthorControllerTests" name="testSomething" time="0.017" />
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="mark-laptop" id="2" name="AuthorTests" package="com.logansrings.booklibrary" tests="1" time="0.0060" timestamp="2010-10-17T04:42:01">
+      <properties />
+
+      <testcase classname="com.logansrings.booklibrary.AuthorTests" name="testSomething" time="0.0040" />
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+</testsuites>

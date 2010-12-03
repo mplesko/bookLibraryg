@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="mark-laptop" name="booklibraryg.HelloControllerTests" tests="1" time="1.004" timestamp="2010-10-17T04:42:00">
+  <properties />
+  <testcase classname="booklibraryg.HelloControllerTests" name="testSomething" time="0.978" />
+  <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+  <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+</testsuite>
