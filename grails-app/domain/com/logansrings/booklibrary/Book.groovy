@@ -2,10 +2,12 @@ package com.logansrings.booklibrary
 
 class Book {
 	
+	static belongsTo = Author
+	static hasMany = [userBooks:UserBook]
+	
 	String title
 	Author author
 
-	static belongsTo = Author
 	static constraints = {
 		title(blank:false)
 	}

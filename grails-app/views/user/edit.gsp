@@ -51,10 +51,17 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                  <label for="book"><g:message code="user.book.label" default="Book" /></label>
+                                  <label for="userBooks"><g:message code="user.userBooks.label" default="User Books" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: userInstance, field: 'book', 'errors')}">
-                                    <g:select name="book" from="${com.logansrings.booklibrary.Book.list()}" multiple="yes" optionKey="id" size="5" value="${userInstance?.book*.id}" />
+                                <td valign="top" class="value ${hasErrors(bean: userInstance, field: 'userBooks', 'errors')}">
+                                    
+<ul>
+<g:each in="${userInstance?.userBooks?}" var="u">
+    <li><g:link controller="userBook" action="show" id="${u.id}">${u?.encodeAsHTML()}</g:link></li>
+</g:each>
+</ul>
+<g:link controller="userBook" action="create" params="['user.id': userInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'userBook.label', default: 'UserBook')])}</g:link>
+
                                 </td>
                             </tr>
                         

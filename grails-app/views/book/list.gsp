@@ -26,9 +26,10 @@
                             <%-- <g:sortableColumn property="id" title="${message(code: 'book.id.label', default: 'Id')}" /> --%>
                         
                             <g:sortableColumn property="title" title="${message(code: 'book.title.label', default: 'Title')}" />
+                            <g:sortableColumn property="author" title="${message(code: 'book.author.label', default: 'Author')}" />
                         
-                            <th><g:message code="book.author.label" default="Author" /></th>
-                        
+<!--                            <th><g:message code="book.author.label" default="Author" /></th>
+-->                        
                         </tr>
                     </thead>
                     <tbody>

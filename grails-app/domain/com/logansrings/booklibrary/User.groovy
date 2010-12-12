@@ -2,8 +2,8 @@ package com.logansrings.booklibrary
 
 class User {
 	
-	static hasMany = [book:Book]
-
+	static hasMany = [userBooks:UserBook]
+	
 	String userName
 	String password
 	
