@@ -2,6 +2,7 @@ package com.logansrings.booklibrary
 
 class User {
 	
+	SortedSet userBooks
 	static hasMany = [userBooks:UserBook]
 	
 	String userName

@@ -1,4 +1,3 @@
-
 <%@ page import="com.logansrings.booklibrary.User" %>
 <html>
     <head>
@@ -48,11 +47,11 @@
 <!--                            <td valign="top" class="name"><g:message code="user.book.label" default="Book" /></td>
 -->
                             <td valign="top" style="text-align: left;" class="value">
-                                <ul>
+                                <ol>
                                 <g:each in="${userInstance.userBooks}" var="b">
                                     <li><g:link controller="book" action="show" id="${b.bookId}">${b.bookString()}</g:link></li>
                                 </g:each>
-                                </ul>
+                                </ol>
                             </td>
                             
                         </tr>
@@ -65,7 +64,7 @@
                     <g:hiddenField name="id" value="${userInstance?.id}" />
 <!--                    <span class="button"><g:actionSubmit class="edit" action="edit" value="${message(code: 'default.button.edit.label', default: 'Edit')}" /></span>
 -->
-                    <g:link controller="userBook" action="create" params="['user.id': userInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'userBook.label', default: 'UserBook')])}</g:link>
+                    <span class="menubutton"><g:link class="create" controller="userBook" action="create" params="['user.id': userInstance?.id]">Add Book To Library</g:link></span>
                     <span class="button"><g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" /></span>
                 </g:form>
             </div>
