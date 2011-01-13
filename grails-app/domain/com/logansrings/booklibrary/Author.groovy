@@ -1,6 +1,6 @@
 package com.logansrings.booklibrary
 
-class Author {
+class Author implements Comparable {
 	
 	static hasMany = [book:Book]
 
@@ -11,6 +11,10 @@ class Author {
 		firstName(blank:false)
 		lastName(blank:false)
     }
-	
+
+	int compareTo(obj) {
+		this.toString().compareTo(obj.toString())
+	}
+
 	String toString() { "${this.lastName}, ${this.firstName}"}
 }

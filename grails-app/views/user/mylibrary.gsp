@@ -49,7 +49,9 @@
                             <td valign="top" style="text-align: left;" class="value">
                                 <ol>
                                 <g:each in="${userInstance.userBooks}" var="b">
-                                    <li><g:link controller="book" action="show" id="${b.bookId}">${b.bookString()}</g:link></li>
+                                    <li><g:link controller="book" action="show" id="${b.bookId}">${b.bookString()}</g:link>
+                                    </li>
+                                    <g:checkbox name="deleteBookFromLibrary" value="${true}" />
                                 </g:each>
                                 </ol>
                             </td>
