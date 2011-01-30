@@ -16,27 +16,31 @@
 	<tr>
 		<td><img src="${resource(dir:'images',file:'deckView.jpg')}"
 			alt="Deck Viewx" height="100" width="100" /></td>
-		<td>
-		<h1>Welcome to Book Library!</h1>
+		<td><g:if test="${session.userId}">
+			    <h1>Welcome to Book Library ${session.userName}!</h1>
+		    </g:if> <g:else>
+			    <h1>Welcome to Book Library!</h1>
+		    </g:else>
 		<h1>We'll help you keep track of the books in your library.</h1>
 		</td>
 	</tr>
 </table>
 </div>
-<div id="toolBar">
-    <span class="menuButton"><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></span>
-	<g:if test="${session.userId}">
-	    <span class="menuButton"><g:link class="info" controller="user" action="logout">logout</g:link></span>
-	</g:if>
-	<g:else>
-	    <span class="menuButton"><g:link class="info" controller="user" action="login">login</g:link></span>
-	</g:else>
-	<span class="menuButton"><g:link class="info" controller="author" action="list">authors</g:link></span>
-	<span class="menuButton"><g:link class="info" controller="book" action="list">books</g:link></span>
-	<g:if test="${session.userId}">
-	    <span class="menuButton"><g:link class="info" controller="user" action="mylibrary">my library</g:link></span>
-	</g:if>	
-</div>
+<div id="toolBar"><span class="menuButton"><a class="home"
+	href="${createLink(uri: '/')}"><g:message code="default.home.label" /></a></span>
+<g:if test="${session.userId}">
+	<span class="menuButton"><g:link class="info" controller="user"
+		action="logout">logout</g:link></span>
+</g:if> <g:else>
+	<span class="menuButton"><g:link class="info" controller="user"
+		action="login">login</g:link></span>
+</g:else> <span class="menuButton"><g:link class="info"
+	controller="author" action="list">authors</g:link></span> <span
+	class="menuButton"><g:link class="info" controller="book"
+	action="list">books</g:link></span> <g:if test="${session.userId}">
+	<span class="menuButton"><g:link class="info" controller="user"
+		action="mylibrary">my library</g:link></span>
+</g:if></div>
 <g:layoutBody />
 </body>
 </html>

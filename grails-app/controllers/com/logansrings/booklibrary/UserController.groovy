@@ -21,14 +21,15 @@ class UserController {
     }
 
 	def doLogin = {
-		System.out.println("in password " + params.password)
+//		System.out.println("in password " + params.password)
 		def encryptedPassword = Encrypting.instance.encrypt(params.password)
-		System.out.println("encrypt password " + encryptedPassword)
+//		System.out.println("encrypt password " + encryptedPassword)
 		def userInstance = User.findByUserNameAndPassword(params.userName, encryptedPassword)
 		if (userInstance) {
 //			flash.message = "user " + userInstance.userName + " has logged in"
-			System.out.println("user " + userInstance.userName + " has logged in")
+//			System.out.println("user " + userInstance.userName + " has logged in")
 			session.userId = userInstance.id
+			session.userName = userInstance.userName
 			redirect(action: "mylibrary")
 		} else {
 			flash.message = "Unable to login: user not found"

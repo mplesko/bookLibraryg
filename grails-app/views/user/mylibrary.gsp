@@ -49,7 +49,10 @@
                             <td valign="top" style="text-align: left;" class="value">
                                 <ol>
                                 <g:each in="${userInstance.userBooks}" var="ub">
-                                    <li><g:link controller="userBook" action="show" id="${ub.id}">${ub.bookString()}</g:link>
+                                    <li>
+                                        <g:link controller="userBook" action="show" id="${ub.id}">${ub.bookString()}</g:link>
+<!--                                        <span class="button"><g:actionSubmit controller="userBook" action="delete" id="${ub.id}" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" /></span>
+-->
                                     </li>
                                 </g:each>
                                 </ol>
@@ -68,6 +71,8 @@
                     <span class="menubutton"><g:link class="create" controller="userBook" action="create" params="['user.id': userInstance?.id]">Add Book To Library</g:link></span>
 <!--                    <span class="button"><g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" /></span>
 -->
+                 <span class="textarea">Click on Book to delete</span>
+					
                 </g:form>
             </div>
         </div>

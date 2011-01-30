@@ -15,7 +15,7 @@
         </div>
 -->
         <div class="body">
-            <h1><g:message code="default.show.label" args="[entityName]" /></h1>
+            <h1>Book in Library</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
