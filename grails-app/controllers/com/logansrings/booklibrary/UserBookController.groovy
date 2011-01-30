@@ -4,8 +4,9 @@ import com.logansrings.booklibrary.UserController
 
 class UserBookController {
 
-    static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
-
+//    static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
+	static allowedMethods = [delete: "POST"]
+	
     def index = {
         redirect(action: "list", params: params)
     }
@@ -88,7 +89,9 @@ class UserBookController {
             try {
                 userBookInstance.delete(flush: true)
                 flash.message = "${message(code: 'default.deleted.message', args: [message(code: 'userBook.label', default: 'UserBook'), params.id])}"
-                redirect(action: "list")
+//                redirect(action: "list")
+				redirect(controller: 'user', action: 'mylibrary' )
+				
             }
             catch (org.springframework.dao.DataIntegrityViolationException e) {
                 flash.message = "${message(code: 'default.not.deleted.message', args: [message(code: 'userBook.label', default: 'UserBook'), params.id])}"
@@ -97,7 +100,8 @@ class UserBookController {
         }
         else {
             flash.message = "${message(code: 'default.not.found.message', args: [message(code: 'userBook.label', default: 'UserBook'), params.id])}"
-            redirect(action: "list")
+//            redirect(action: "list")
+			redirect(controller: 'user', action: 'mylibrary' )
         }
     }
 }

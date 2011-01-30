@@ -48,10 +48,9 @@
 -->
                             <td valign="top" style="text-align: left;" class="value">
                                 <ol>
-                                <g:each in="${userInstance.userBooks}" var="b">
-                                    <li><g:link controller="book" action="show" id="${b.bookId}">${b.bookString()}</g:link>
+                                <g:each in="${userInstance.userBooks}" var="ub">
+                                    <li><g:link controller="userBook" action="show" id="${ub.id}">${ub.bookString()}</g:link>
                                     </li>
-                                    <g:checkbox name="deleteBookFromLibrary" value="${true}" />
                                 </g:each>
                                 </ol>
                             </td>
@@ -67,7 +66,8 @@
 <!--                    <span class="button"><g:actionSubmit class="edit" action="edit" value="${message(code: 'default.button.edit.label', default: 'Edit')}" /></span>
 -->
                     <span class="menubutton"><g:link class="create" controller="userBook" action="create" params="['user.id': userInstance?.id]">Add Book To Library</g:link></span>
-                    <span class="button"><g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" /></span>
+<!--                    <span class="button"><g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" /></span>
+-->
                 </g:form>
             </div>
         </div>
